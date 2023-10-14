@@ -14,22 +14,32 @@ import { AssignmentsComponent } from './assignments/assignments.component';
 import { RenduDirective } from './shared/rendu.directive';
 import { NonRenduDirective } from './shared/non-rendu.directive';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
+import { MatLineModule, MatNativeDateModule } from '@angular/material/core';
+import { AssignmentDetailComponent } from './assignments/assignment-detail/assignment-detail.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {RouterModule, Routes} from '@angular/router';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     AssignmentsComponent,
     RenduDirective,
-    NonRenduDirective
+    NonRenduDirective,
+    AssignmentDetailComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,RouterModule.forRoot([]),
     BrowserAnimationsModule,
     MatButtonModule, MatIconModule, MatDividerModule,
     MatCardModule, MatFormFieldModule, MatInputModule,
-    FormsModule, MatDatepickerModule, MatNativeDateModule
+    FormsModule, MatDatepickerModule, MatNativeDateModule,
+    MatToolbarModule,MatListModule,MatLineModule,MatSidenavModule,
   ],
+
+  
   providers: [],
   bootstrap: [AppComponent]
 })

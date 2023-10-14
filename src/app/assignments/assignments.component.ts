@@ -5,12 +5,14 @@ import { Assignment } from './assignment.model';
   selector: 'app-assignments',
   templateUrl: './assignments.component.html',
   styleUrls: ['./assignments.component.css'],
+
 })
 export class AssignmentsComponent implements OnInit {
   titre = "Formulaire d'ajout de devoir";
   color = 'green';
   id="monParagraphe";
   boutonDesactive = true;
+  opened=true;
   // pour le formulaire
   nomDevoir=""
   dateDeRendu?:Date=undefined;

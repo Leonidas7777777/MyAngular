@@ -1,5 +1,6 @@
 <h3>{{ titre }}</h3>
 
+
 <form ngForm (submit)="onSubmit($event)" #assignmentForm class="form">
   <mat-form-field>
     <mat-label> Nom : </mat-label>
@@ -27,9 +28,12 @@
 
 <div *ngFor="let a of assignments">
   <p *ngIf="a.rendu" appRendu>
-    {{ a.nom }}, à rendre le {{ a.dateDeRendu }} RENDU.
+    {{ a.nom }}, à rendre le {{ a.dateDeRendu| date }} RENDU.
   </p>
   <p *ngIf="!a.rendu" appNonRendu>
-    {{ a.nom }}, à rendre le {{ a.dateDeRendu }} NON RENDU.
+    {{ a.nom }}, à rendre le {{ a.dateDeRendu |date }} NON RENDU.
   </p>
 </div>
+<app-assignment-detail></app-assignment-detail>
+
+
